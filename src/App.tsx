@@ -46,7 +46,7 @@ interface TourPackage {
   id: string;
   title: string;
   tagline: string;
-  category: 'devotional' | 'leisure' | 'airport_outstation';
+  category: 'devotional' | 'leisure' | 'airport_outstation' | 'local';
   image: string;
   features: string[];
   route: string;
@@ -59,7 +59,7 @@ const TOUR_PACKAGES: TourPackage[] = [
     title: "Tirumala Tirupati Devotional",
     tagline: "Hassle-free direct family darshan tour from Kadapa",
     category: 'devotional',
-    image: "https://images.unsplash.com/photo-1561361530-226759a1f2aa?auto=format&fit=crop&q=80&w=600",
+    image: "https://images.unsplash.com/photo-1608930264026-616a9c3f103a?auto=format&fit=crop&q=80&w=600",
     features: ["Door-to-Door Pickup in Kadapa", "Alipiri Forest Path Guidance", "Flexible halts & Hairpin bend safety", "Experienced Pilgrim Support"],
     route: "Kadapa → Rajampet → Tirupati → Tirumala Hills"
   },
@@ -86,7 +86,7 @@ const TOUR_PACKAGES: TourPackage[] = [
     title: "Ahobilam & Mahanandi Historic",
     tagline: "Explore divine Navanarasimha temples & perennial holy streams",
     category: 'devotional',
-    image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&q=80&w=600",
+    image: "https://images.unsplash.com/photo-1600100397990-24b5258f3f1e?auto=format&fit=crop&q=80&w=600",
     features: ["Multi-destination halting route", "Spacious luggage carriers", "Local guide coordinate assist", "Ideal for senior citizens"],
     route: "Kadapa → Mahanandi → Ahobilam Sacred Hills"
   },
@@ -95,7 +95,7 @@ const TOUR_PACKAGES: TourPackage[] = [
     title: "Kanipakam & Vellore Trip",
     tagline: "Blessings of Varasiddhi Vinayaka & majestic Golden Temple",
     category: 'devotional',
-    image: "https://images.unsplash.com/photo-1608930264026-616a9c3f103a?auto=format&fit=crop&q=80&w=600",
+    image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&q=80&w=600",
     features: ["Bilingual driver (Telugu & Tamil)", "Halt at Kanipakam temple", "Vellore Golden Temple coverage", "Custom temple halt timing"],
     route: "Kadapa → Chittoor → Kanipakam → Vellore Golden Temple"
   },
@@ -153,9 +153,55 @@ const TOUR_PACKAGES: TourPackage[] = [
     title: "Hyderabad Capital Transit",
     tagline: "Direct highway cruise from Kadapa to Hyderabad Gachibowli",
     category: 'airport_outstation',
-    image: "https://images.unsplash.com/photo-1605007493699-af65834f8a00?auto=format&fit=crop&q=80&w=600",
+    image: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&q=80&w=600",
     features: ["Direct Kurnool 4-lane highway route", "Express night driving optional", "Drop off at Rajiv Gandhi Intl (HYD)", "Snack halt suggestion included"],
     route: "Kadapa → Kurnool → Hyderabad RGIA / Gachibowli"
+  },
+  // LOCAL VISITS
+  {
+    id: "local-gandikota",
+    title: "Gandikota Adventure Exploration",
+    tagline: "Witness the majestic Grand Canyon of India & historical fort walls",
+    category: 'local',
+    image: "https://images.unsplash.com/photo-1614082242765-7c98ca0f3df3?auto=format&fit=crop&q=80&w=600",
+    features: ["Breathtaking Pennar gorge sunset timing", "Ancient Gandikota Fort walking heritage tours", "Doorstep pickup and comfortable AC travel", "Driver assistance for canyon viewpoints & photos"],
+    route: "Kadapa → Jammalamadugu → Gandikota Gorge & Fort"
+  },
+  {
+    id: "local-devuni-kadapa",
+    title: "Devuni Kadapa Shri Venkateswara Swamy Darshan",
+    tagline: "Pilgrimage to the sacred threshold gateway of Tirumala Tirupati",
+    category: 'local',
+    image: "https://images.unsplash.com/photo-1608930264026-616a9c3f103a?auto=format&fit=crop&q=80&w=600",
+    features: ["Special quick darshan guidance", "Auspicious morning or evening visits", "Includes senior citizen comfort seating", "Zero-hassle city pickup and return drop"],
+    route: "Kadapa City → Devuni Kadapa Venkateswara Shrine → Kadapa City"
+  },
+  {
+    id: "local-ameen-peer-dargah",
+    title: "Ameen Peer Dargah (Asthana-e-Zahrah)",
+    tagline: "Sacred sufi shrine of divine harmony, peace, and spiritual light",
+    category: 'local',
+    image: "https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&q=80&w=600",
+    features: ["Floral & chaadar offering helper assistance", "Fascinating history narration of Sufi saints", "Serene evening prayer time visits", "Perfect for multi-faith peace seekers"],
+    route: "Kadapa City → Ameen Peer Dargah (Pedda Dargah) → Kadapa City"
+  },
+  {
+    id: "local-ontimitta",
+    title: "Ontimitta Kodandarama Swamy Temple",
+    tagline: "Architectural treasure with monolith Rama, Sita & Lakshmana shrines",
+    category: 'local',
+    image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&q=80&w=600",
+    features: ["Spectacular Srikrishnadevaraya stone arches", "Charming prayer and temple pool halt", "Sunset viewpoint and photography session", "Helpful local pilgrimage advice"],
+    route: "Kadapa → Ontimitta Historic Temple Town → Kadapa"
+  },
+  {
+    id: "local-pushpagiri",
+    title: "Pushpagiri Hilltop Temples & Pennar River",
+    tagline: "Second Hampi of Rayalaseema - Holy hilltop shrines & scenic riverbeds",
+    category: 'local',
+    image: "https://images.unsplash.com/photo-1600100397990-24b5258f3f1e?auto=format&fit=crop&q=80&w=600",
+    features: ["Hillside driving safety guaranteed", "Ancient rock-cut temples of Trimurthis", "Beautiful Pennar riverbank viewpoints", "Peaceful serene devotional family getaway"],
+    route: "Kadapa → Chennur → Pushpagiri Temple Hills → Kadapa"
   }
 ];
 
@@ -360,7 +406,7 @@ function AppContent() {
   const [selectedType, setSelectedType] = useState<string>('All');
 
   // Tour packages active category selection ('all' | 'devotional' | 'leisure' | 'airport_outstation' | 'custom')
-  const [selectedPkgCategory, setSelectedPkgCategory] = useState<'all' | 'devotional' | 'leisure' | 'airport_outstation' | 'custom'>('all');
+  const [selectedPkgCategory, setSelectedPkgCategory] = useState<'all' | 'devotional' | 'leisure' | 'airport_outstation' | 'local' | 'custom'>('all');
 
   // Interactive Custom Trip Builder State parameters
   const [customDestination, setCustomDestination] = useState('');
@@ -384,7 +430,10 @@ function AppContent() {
 
   // Scroll to section helpers
   const scrollToFleet = () => {
-    document.getElementById('fleet-section')?.scrollIntoView({ behavior: 'smooth' });
+    window.dispatchEvent(new CustomEvent('sree-hanuman-set-main-category', { detail: { mainId: 'vehicles' } }));
+    setTimeout(() => {
+      document.getElementById('structure-explorer-section')?.scrollIntoView({ behavior: 'smooth' });
+    }, 50);
   };
 
   const scrollToContact = () => {
@@ -620,9 +669,7 @@ function AppContent() {
 
             {/* Sree Hanuman Travels Dynamic Category Navigation Directory Tree */}
             <StructureExplorer 
-              onSelectVehicleTypeFilter={(type: string) => {
-                setSelectedType(type as any);
-              }}
+              onRentCar={handleRentCar}
               onTriggerCustomTrip={() => {
                 setSelectedPkgCategory('custom');
                 setTimeout(() => {
@@ -634,77 +681,6 @@ function AppContent() {
               }}
             />
 
-            {/* Interactive Car Fleet Grid Section */}
-            <section id="fleet-section" className="space-y-6 pt-4 scroll-mt-28">
-              <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-slate-200 pb-5">
-                <div>
-                  <span className="text-[10px] font-black text-orange-500 uppercase tracking-widest">Self-Drive & Driven Cars</span>
-                  <h3 className="text-3xl font-black text-slate-900 tracking-tight mt-1 uppercase italic">Our Rental Fleet Collection</h3>
-                  <p className="text-xs text-slate-500 mt-0.5">Meticulously serviced hatchbacks, premium Crystas, utility Toofans, & tourist buses</p>
-                </div>
-
-                {/* Filters Row */}
-                <div className="flex flex-wrap items-center gap-3">
-                  {/* Category selections */}
-                  <div className="flex flex-wrap rounded-2xl bg-slate-200/60 p-1 border border-slate-200">
-                    {['All', 'MUV', 'Sedan', 'Hatchback', 'Bus'].map((type) => (
-                      <button 
-                        key={type}
-                        onClick={() => setSelectedType(type)}
-                        className={`px-3 py-1.5 text-xs font-black uppercase tracking-wider rounded-xl transition-all cursor-pointer ${
-                          selectedType === type 
-                            ? 'bg-slate-900 text-white shadow-sm font-bold' 
-                            : 'text-slate-600 hover:text-slate-950'
-                        }`}
-                      >
-                        {type}
-                      </button>
-                    ))}
-                  </div>
-
-                  {/* Search query field */}
-                  <div className="relative">
-                    <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400">
-                      <Search className="h-4 w-4" />
-                    </span>
-                    <input 
-                      type="text" 
-                      placeholder="Search vehicle specs..."
-                      value={searchQuery}
-                      onChange={(e) => setSearchQuery(e.target.value)}
-                      className="rounded-2xl border border-slate-200 bg-white py-2 pl-9 pr-4 text-xs font-medium text-slate-800 focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400 transition-all w-full sm:w-56"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              {/* Output pricing warning detail badge */}
-              <div className="bg-emerald-500/5 rounded-2xl border border-emerald-500/10 p-4 text-xs font-semibold text-emerald-800 flex items-center space-x-2.5 max-w-2xl">
-                <ShieldAlert className="h-4.5 w-4.5 text-emerald-500 shrink-0" />
-                <span>
-                 To give you the lowest possible rate, we do not keep fixed price tags. Tap any <strong>Ask Price on WhatsApp</strong> on our fleet cards to receive custom friendly tariffs direct from Settooru Bros!
-                </span>
-              </div>
-
-              {/* Cars list grid */}
-              {filteredVehicles.length === 0 ? (
-                <div className="py-20 text-center space-y-2 bg-white rounded-3xl border border-slate-100">
-                  <p className="text-sm font-bold text-slate-600 uppercase tracking-wider">No vehicles match your options.</p>
-                  <p className="text-xs text-slate-400">Try changing search descriptors or clean class filter category tab!</p>
-                </div>
-              ) : (
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {filteredVehicles.map((car) => (
-                    <CarCard 
-                      key={car.id} 
-                      car={car} 
-                      onBook={handleRentCar} 
-                    />
-                  ))}
-                </div>
-              )}
-            </section>
-
             {/* Pilgrimage general & Custom trip travel packages */}
             <section id="packages-section" className="space-y-6 pt-4 scroll-mt-28">
               <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 border-b border-slate-200 pb-5">
@@ -714,14 +690,15 @@ function AppContent() {
                   <p className="text-xs text-slate-500 mt-0.5">Direct pilgrimages, scenic leisure escapes, or fully personalized custom route planning</p>
                 </div>
 
-                {/* Travel Package Categories Selector Tabs */}
-                <div className="flex flex-wrap items-center gap-1.5 p-1 bg-slate-100 border border-slate-200 rounded-2xl max-w-4xl self-start lg:self-auto shrink-0">
+                {/* Travel Package Categories Selector Tabs - touch friendly scroll on mobile */}
+                <div className="flex overflow-x-auto whitespace-nowrap scrollbar-none [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden items-center gap-1.5 p-1 bg-slate-100 border border-slate-200 rounded-2xl w-full lg:w-auto flex-nowrap shrink-0">
                   {[
                     { id: 'all', label: 'All Packages', icon: Compass },
                     { id: 'devotional', label: 'Devotional', icon: Sparkles },
+                    { id: 'local', label: 'Local Visits 🚩', icon: MapPin },
                     { id: 'leisure', label: 'Leisure & Nature', icon: Map },
                     { id: 'airport_outstation', label: 'Airport Transit', icon: Plane },
-                    { id: 'custom', label: '🛠️ Custom Trip Planner', icon: Wand2, highlight: true }
+                    { id: 'custom', label: 'Custom Planner', icon: Wand2, highlight: true }
                   ].map((tab) => {
                     const Icon = tab.icon;
                     const isActive = selectedPkgCategory === tab.id;
@@ -730,17 +707,17 @@ function AppContent() {
                         key={tab.id}
                         type="button"
                         onClick={() => setSelectedPkgCategory(tab.id as any)}
-                        className={`flex items-center space-x-1.5 px-3 py-2 text-[10px] font-black uppercase tracking-wider rounded-xl cursor-pointer transition-all duration-200 ${
+                        className={`flex items-center space-x-1.5 px-3.5 py-2.5 text-[10px] font-black uppercase tracking-wider rounded-xl cursor-pointer transition-all duration-200 flex-shrink-0 ${
                           isActive
                             ? tab.highlight 
-                              ? 'bg-amber-500 text-slate-950 shadow-md shadow-amber-500/20'
+                              ? 'bg-amber-500 text-slate-950 shadow-md'
                               : 'bg-slate-900 text-white shadow-sm'
                             : tab.highlight
-                              ? 'bg-amber-500/10 hover:bg-amber-500/20 text-amber-600 border border-amber-500/30'
+                              ? 'bg-amber-500/10 hover:bg-amber-500/20 text-amber-600 border border-amber-500/20'
                               : 'hover:bg-slate-200 text-slate-600'
                         }`}
                       >
-                        <Icon className="h-3 w-3 shrink-0" />
+                        <Icon className="h-3.5 w-3.5 shrink-0 text-orange-500" />
                         <span>{tab.label}</span>
                       </button>
                     );
@@ -768,7 +745,13 @@ function AppContent() {
                           <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-slate-950/80 to-transparent"></div>
                           {/* Category Badge */}
                           <span className="absolute top-3 left-3 bg-slate-950/80 backdrop-blur-md px-2.5 py-1 rounded-md text-[8px] font-black uppercase tracking-widest text-amber-400 border border-amber-500/30">
-                            {pkg.category === 'devotional' ? '🕉️ Devotional' : pkg.category === 'leisure' ? '🏞️ Leisure' : '✈️ Outstation'}
+                            {pkg.category === 'devotional' 
+                              ? '🕉️ Devotional' 
+                              : pkg.category === 'local' 
+                              ? '🚩 Local Visits' 
+                              : pkg.category === 'leisure' 
+                              ? '🏞️ Leisure' 
+                              : '✈️ Outstation'}
                           </span>
                         </div>
 

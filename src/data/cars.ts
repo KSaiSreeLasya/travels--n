@@ -1,3 +1,11 @@
+import innovaImg from "../assets/images/toyota_innova_crysta_1781546407050.jpg";
+import cruiserImg from "../assets/images/force_cruiser_1781546426691.jpg";
+import toofanImg from "../assets/images/force_toofan_1781546441666.jpg";
+import smlBusImg from "../assets/images/sml_bus_1781546457511.jpg";
+import etiosImg from "../assets/images/toyota_etios_1781546510305.jpg";
+import ertigaImg from "../assets/images/suzuki_ertiga_1781546470675.jpg";
+import balenoImg from "../assets/images/suzuki_baleno_1781546486902.jpg";
+
 export interface Car {
   id: string;
   name: string;
@@ -14,94 +22,94 @@ export interface Car {
 
 export const CAR_FLEET: Car[] = [
   {
-    id: "innova-crysta",
-    name: "Toyota Innova Crysta",
+    id: "innova-classic",
+    name: "Toyota Innova (Classic with SHIELD Guard)",
     type: "MUV",
-    pricePerDay: 3500,
+    pricePerDay: 3200,
     transmission: "Manual",
     fuel: "Diesel",
     seats: 7,
-    image: "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&q=80&w=600",
+    image: innovaImg,
     mileage: "12.5 km/l",
     rating: 4.9,
-    features: ["White Imperial Finish", "Experienced Driver Option", "Carrier Equipped", "Front Shield Guard", "Best for Family Outings"]
+    features: ["Equipped with heavy-duty front chrome SHIELD guard bar", "White professional finish", "Experienced outstation driver option", "Rooftip luggage carrier available", "Perfect for long family pilgrimages"]
   },
   {
     id: "force-cruiser",
-    name: "Force Cruiser (12+1)",
+    name: "Force Cruiser (12+1 Seater)",
     type: "MUV",
     pricePerDay: 4200,
     transmission: "Manual",
     fuel: "Diesel",
     seats: 13,
-    image: "https://images.unsplash.com/photo-1517524206127-48bbd363f3d7?auto=format&fit=crop&q=80&w=600",
+    image: cruiserImg,
     mileage: "10.5 km/l",
     rating: 4.8,
-    features: ["12+1 Seater Passenger Cap", "Heavy Duty Roof Luggage Carrier", "Excellent for Outstation Pilgrimages", "High Ground Clearance"]
+    features: ["12+1 Spacious layout for groups", "Heavy-duty metal roof luggage carrier rack", "Excellent high ground clearance", "Best-in-class performance for long offroad/rural paths"]
   },
   {
     id: "force-toofan",
-    name: "Force Toofan (11+1)",
+    name: "Force Toofan (11+1 Seater)",
     type: "MUV",
     pricePerDay: 4000,
     transmission: "Manual",
     fuel: "Diesel",
     seats: 12,
-    image: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&q=80&w=600",
+    image: toofanImg,
     mileage: "11.0 km/l",
     rating: 4.7,
-    features: ["11+1 Seater Space", "Sattar Colony Branch Regular", "Perfect for Kadapa Rural Trips", "Durable All-Terrain Chassis"]
+    features: ["11+1 spacious passenger seats", "Clean side-profile TOOFAN signature decals", "Durable all-terrain chassis", "Perfect for Kadapa local & rural group transport"]
   },
   {
     id: "sml-executive-bus",
-    name: "SML Executive Passenger Bus",
+    name: "SML Isuzu Executive Bus (25+1)",
     type: "Bus",
     pricePerDay: 9500,
     transmission: "Manual",
     fuel: "Diesel",
     seats: 25,
-    image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=600",
+    image: smlBusImg,
     mileage: "8.0 km/l",
     rating: 4.9,
-    features: ["25+1 Luxury Headroom Seats", "Air Conditioned Executive Cab", "Full Integrated Sound System", "Custom Long-Distance Package Deals"]
+    features: ["25+1 premium push-back luxury seats", "Full air-conditioned executive coach", "High roof clearance layout", "Digital music & sound system", "Ideal for marriages, tours, and company events"]
   },
   {
-    id: "toyota-etios",
-    name: "Toyota Etios (AP39TD8168)",
-    type: "Sedan",
-    pricePerDay: 2200,
+    id: "innova-crysta",
+    name: "Toyota Innova Crysta (Luxury MUV)",
+    type: "MUV",
+    pricePerDay: 3800,
     transmission: "Manual",
     fuel: "Diesel",
-    seats: 5,
-    image: "https://images.unsplash.com/photo-1542282088-fe8426682b8f?auto=format&fit=crop&q=80&w=600",
-    mileage: "18.5 km/l",
-    rating: 4.8,
-    features: ["Authorized Kadapa Cab Plate", "Slick Commercial License", "Spacious Luggage Boot", "Superb Air Conditioning", "Great highway stability"]
+    seats: 7,
+    image: etiosImg, // Pointed to the modern Innova Crysta image previously named etiosImg
+    mileage: "13.5 km/l",
+    rating: 4.9,
+    features: ["Premium modern body lines", "Rugged matte black front protector bumper shield", "Plush luxury interior captain seats", "Perfect cooling front and rear automatic AC", "First-class highway ride comfort"]
   },
   {
     id: "suzuki-ertiga",
-    name: "Suzuki Ertiga Family Comfort",
+    name: "Suzuki Ertiga (7-Seater Comfort)",
     type: "MUV",
     pricePerDay: 2800,
     transmission: "Manual",
     fuel: "Petrol",
     seats: 7,
-    image: "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&q=80&w=600",
+    image: ertigaImg,
     mileage: "15.0 km/l",
     rating: 4.7,
-    features: ["7 Seats Compact Layout", "Smart Hybrid Fuel Saving", "Rear AC Vents", "Flexible Cargo Expansion", "Local Tour Friendly"]
+    features: ["7 Seats compact passenger layout", "Traditional front flower garland ready for auspicious trips", "Highly economical smart-hybrid engine", "Dual blower front & rear cooling vents", "Excellent for city and tourist visits"]
   },
   {
     id: "suzuki-baleno",
-    name: "Suzuki Baleno Core",
+    name: "Suzuki Baleno (Marriage Special)",
     type: "Hatchback",
     pricePerDay: 1800,
     transmission: "Manual",
     fuel: "Petrol",
     seats: 5,
-    image: "https://images.unsplash.com/photo-1619767886558-efdc259cde1a?auto=format&fit=crop&q=80&w=600",
+    image: balenoImg,
     mileage: "19.5 km/l",
     rating: 4.6,
-    features: ["Compact Design", "Highly Maneuverable", "Powerful Petrol Engine", "Keyless Central Locking", "Super Economical"]
+    features: ["Beautiful hood red decorative ribbons perfect for weddings", "Sleek projector LED headlights for night travel", "Ultra-maneuverable local hatchback", "Extremely fuel efficient engine", "Smart keyless entry push button start"]
   }
 ];
