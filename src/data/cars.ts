@@ -21,7 +21,7 @@ export const CAR_FLEET: Car[] = [
     transmission: "Manual",
     fuel: "Diesel",
     seats: 7,
-    image: "https://images.unsplash.com/photo-1581540222473-c199e0b17208?auto=format&fit=crop&q=80&w=600",
+    image: "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&q=80&w=600",
     mileage: "12.5 km/l",
     rating: 4.9,
     features: ["White Imperial Finish", "Experienced Driver Option", "Carrier Equipped", "Front Shield Guard", "Best for Family Outings"]
@@ -99,7 +99,7 @@ export const CAR_FLEET: Car[] = [
     transmission: "Manual",
     fuel: "Petrol",
     seats: 5,
-    image: "https://images.unsplash.com/photo-1627454823403-ff54df8a48b4?auto=format&fit=crop&q=80&w=600",
+    image: "https://images.unsplash.com/photo-1619767886558-efdc259cde1a?auto=format&fit=crop&q=80&w=600",
     mileage: "19.5 km/l",
     rating: 4.6,
     features: ["Compact Design", "Highly Maneuverable", "Powerful Petrol Engine", "Keyless Central Locking", "Super Economical"]

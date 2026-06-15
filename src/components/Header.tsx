@@ -60,32 +60,85 @@ export const Header: React.FC<HeaderProps> = ({
         </div>
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden md:flex items-center space-x-1 bg-white/5 rounded-full p-1 border border-white/10">
+        <nav className="hidden lg:flex items-center space-x-1 bg-white/5 rounded-full p-1 border border-white/10">
           <button 
-            onClick={() => { setActiveTab('explore'); onScrollToFleet(); setMobileMenuOpen(false); }}
-            className={`px-4 py-1.5 text-xs font-black uppercase tracking-wider transition-all rounded-full cursor-pointer ${
-              activeTab === 'explore' 
-                ? 'text-slate-950 bg-amber-500 shadow-md font-bold' 
-                : 'text-white/70 hover:text-white hover:bg-white/5'
-            }`}
+            onClick={() => { 
+              setActiveTab('explore'); 
+              window.scrollTo({ top: 0, behavior: 'smooth' }); 
+              setMobileMenuOpen(false); 
+            }}
+            className="px-3.5 py-1.5 text-xs font-black uppercase tracking-wider transition-all rounded-full cursor-pointer text-white/80 hover:text-white hover:bg-white/5"
           >
-            Our Fleet
+            Home
+          </button>
+
+          <button 
+            onClick={() => { 
+              setActiveTab('explore'); 
+              setMobileMenuOpen(false); 
+              setTimeout(() => {
+                document.getElementById('structure-explorer-section')?.scrollIntoView({ behavior: 'smooth' });
+                window.dispatchEvent(new CustomEvent('sree-hanuman-set-main-category', { detail: { mainId: 'vehicles' } }));
+              }, 50);
+            }}
+            className="px-3.5 py-1.5 text-xs font-black uppercase tracking-wider transition-all rounded-full cursor-pointer text-white/80 hover:text-white hover:bg-white/5"
+          >
+            Vehicles
+          </button>
+
+          <button 
+            onClick={() => { 
+              setActiveTab('explore'); 
+              setMobileMenuOpen(false); 
+              setTimeout(() => {
+                document.getElementById('structure-explorer-section')?.scrollIntoView({ behavior: 'smooth' });
+                window.dispatchEvent(new CustomEvent('sree-hanuman-set-main-category', { detail: { mainId: 'services' } }));
+              }, 50);
+            }}
+            className="px-3.5 py-1.5 text-xs font-black uppercase tracking-wider transition-all rounded-full cursor-pointer text-white/80 hover:text-white hover:bg-white/5"
+          >
+            Services
+          </button>
+
+          <button 
+            onClick={() => { 
+              setActiveTab('explore'); 
+              setMobileMenuOpen(false); 
+              setTimeout(() => {
+                document.getElementById('structure-explorer-section')?.scrollIntoView({ behavior: 'smooth' });
+                window.dispatchEvent(new CustomEvent('sree-hanuman-set-main-category', { detail: { mainId: 'destinations' } }));
+              }, 50);
+            }}
+            className="px-3.5 py-1.5 text-xs font-black uppercase tracking-wider transition-all rounded-full cursor-pointer text-white/80 hover:text-white hover:bg-white/5"
+          >
+            Destinations
+          </button>
+
+          <button 
+            onClick={() => { 
+              setActiveTab('explore'); 
+              onScrollToFleet(); 
+              setMobileMenuOpen(false); 
+            }}
+            className="px-3.5 py-1.5 text-xs font-black uppercase tracking-wider transition-all rounded-full cursor-pointer text-white/80 hover:text-white hover:bg-white/5"
+          >
+            Fleet
           </button>
           
           <button 
-            onClick={() => { setActiveTab('explore'); onScrollToContact(); setMobileMenuOpen(false); }}
-            className={`px-4 py-1.5 text-xs font-black uppercase tracking-wider transition-all rounded-full cursor-pointer ${
-              activeTab === 'contact' 
-                ? 'text-slate-950 bg-amber-500 shadow-md font-bold' 
-                : 'text-white/70 hover:text-white hover:bg-white/5'
-            }`}
+            onClick={() => { 
+              setActiveTab('explore'); 
+              onScrollToContact(); 
+              setMobileMenuOpen(false); 
+            }}
+            className="px-3.5 py-1.5 text-xs font-black uppercase tracking-wider transition-all rounded-full cursor-pointer text-white/80 hover:text-white hover:bg-white/5"
           >
-            Location
+            Contact
           </button>
         </nav>
 
         {/* Action Widgets: Call Quick button & Member Auth details */}
-        <div className="hidden md:flex items-center space-x-3">
+        <div className="hidden lg:flex items-center space-x-3">
           
           {/* Header direct call button linking to 9676939529 */}
           <a 
@@ -100,7 +153,7 @@ export const Header: React.FC<HeaderProps> = ({
         </div>
 
         {/* Mobile menu and direct call layout */}
-        <div className="flex items-center space-x-3 md:hidden">
+        <div className="flex items-center space-x-3 lg:hidden">
           
           {/* Quick call dialer for mobile header */}
           <a 
@@ -125,22 +178,79 @@ export const Header: React.FC<HeaderProps> = ({
 
       {/* Expanded Mobile Menu Drawer panel with beautiful motion styles */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-t border-white/10 bg-slate-950 p-4 space-y-3 shadow-2xl animate-fade-in" id="mobile-menu-drawer">
+        <div className="lg:hidden border-t border-white/10 bg-slate-950 p-4 space-y-3 shadow-2xl animate-fade-in" id="mobile-menu-drawer">
           <nav className="flex flex-col space-y-1">
             <button 
-              onClick={() => { setActiveTab('explore'); onScrollToFleet(); setMobileMenuOpen(false); }}
-              className={`w-full text-left px-4 py-3 text-xs font-black uppercase tracking-wider rounded-xl transition-all ${
-                activeTab === 'explore' ? 'bg-amber-500 text-slate-950 font-bold' : 'text-white/70 hover:text-white hover:bg-white/5'
-              }`}
+              onClick={() => { 
+                setActiveTab('explore'); 
+                window.scrollTo({ top: 0, behavior: 'smooth' }); 
+                setMobileMenuOpen(false); 
+              }}
+              className="w-full text-left px-4 py-3 text-xs font-black uppercase tracking-wider rounded-xl text-white/80 hover:text-white hover:bg-white/5"
+            >
+              Home
+            </button>
+
+            <button 
+              onClick={() => { 
+                setActiveTab('explore'); 
+                setMobileMenuOpen(false); 
+                setTimeout(() => {
+                  document.getElementById('structure-explorer-section')?.scrollIntoView({ behavior: 'smooth' });
+                  window.dispatchEvent(new CustomEvent('sree-hanuman-set-main-category', { detail: { mainId: 'vehicles' } }));
+                }, 50);
+              }}
+              className="w-full text-left px-4 py-3 text-xs font-black uppercase tracking-wider rounded-xl text-white/80 hover:text-white hover:bg-white/5"
+            >
+              Vehicles
+            </button>
+
+            <button 
+              onClick={() => { 
+                setActiveTab('explore'); 
+                setMobileMenuOpen(false); 
+                setTimeout(() => {
+                  document.getElementById('structure-explorer-section')?.scrollIntoView({ behavior: 'smooth' });
+                  window.dispatchEvent(new CustomEvent('sree-hanuman-set-main-category', { detail: { mainId: 'services' } }));
+                }, 50);
+              }}
+              className="w-full text-left px-4 py-3 text-xs font-black uppercase tracking-wider rounded-xl text-white/80 hover:text-white hover:bg-white/5"
+            >
+              Services
+            </button>
+
+            <button 
+              onClick={() => { 
+                setActiveTab('explore'); 
+                setMobileMenuOpen(false); 
+                setTimeout(() => {
+                  document.getElementById('structure-explorer-section')?.scrollIntoView({ behavior: 'smooth' });
+                  window.dispatchEvent(new CustomEvent('sree-hanuman-set-main-category', { detail: { mainId: 'destinations' } }));
+                }, 50);
+              }}
+              className="w-full text-left px-4 py-3 text-xs font-black uppercase tracking-wider rounded-xl text-white/80 hover:text-white hover:bg-white/5"
+            >
+              Destinations
+            </button>
+
+            <button 
+              onClick={() => { 
+                setActiveTab('explore'); 
+                onScrollToFleet(); 
+                setMobileMenuOpen(false); 
+              }}
+              className="w-full text-left px-4 py-3 text-xs font-black uppercase tracking-wider rounded-xl text-white/80 hover:text-white hover:bg-white/5"
             >
               Our Rental Fleet
             </button>
             
             <button 
-              onClick={() => { setActiveTab('explore'); onScrollToContact(); setMobileMenuOpen(false); }}
-              className={`w-full text-left px-4 py-3 text-xs font-black uppercase tracking-wider rounded-xl transition-all ${
-                activeTab === 'contact' ? 'bg-amber-500 text-slate-950 font-bold' : 'text-white/70 hover:text-white hover:bg-white/5'
-              }`}
+              onClick={() => { 
+                setActiveTab('explore'); 
+                onScrollToContact(); 
+                setMobileMenuOpen(false); 
+              }}
+              className="w-full text-left px-4 py-3 text-xs font-black uppercase tracking-wider rounded-xl text-white/80 hover:text-white hover:bg-white/5"
             >
               Contact Branch
             </button>
