@@ -411,7 +411,7 @@ export const StructureExplorer: React.FC<StructureExplorerProps> = ({
                 
                 {/* Vehicle sub-filters */}
                 <div className="flex overflow-x-auto whitespace-nowrap scrollbar-none rounded-2xl bg-slate-200/60 p-1 border border-slate-200 flex-nowrap shrink-0">
-                  {['All', 'MUV', 'Sedan', 'Hatchback', 'Bus'].map((type) => (
+                  {['All', 'MUV', 'Sedan', 'Tempo', 'Bus'].map((type) => (
                     <button 
                       key={type}
                       type="button"
