@@ -9,7 +9,7 @@ import balenoImg from "../assets/images/suzuki_baleno_1781546486902.jpg";
 export interface Car {
   id: string;
   name: string;
-  type: 'SUV' | 'Hatchback' | 'Sedan' | 'MUV' | 'Bus' |'Mini Bus' | 'Tempo traveller' ;
+  type: 'SUV' |  'Sedan' | 'MUV' | 'Bus' | 'Tempo' ;
   pricePerDay: number;
   transmission: 'Manual' | 'Automatic';
   
@@ -37,7 +37,7 @@ export const CAR_FLEET: Car[] = [
   {
     id: " Etios Sedan ",
     name: "Toyota Etios Sedan  (4+1 Seater)",
-    type: "MUV",
+    type: "Sedan",
     pricePerDay: 4200,
     transmission: "Manual",
     
@@ -50,7 +50,7 @@ export const CAR_FLEET: Car[] = [
   {
     id: "force-toofan",
     name: "Force Toofan (11+1 Seater)",
-    type: "MUV",
+    type: "Tempo",
     pricePerDay: 4000,
     transmission: "Manual",
     
@@ -76,7 +76,7 @@ export const CAR_FLEET: Car[] = [
   {
     id: "Maruthi ",
     name: "Maruthi Dzire (4+1 seater)",
-    type: "MUV",
+    type: "Sedan",
     pricePerDay: 3800,
     transmission: "Manual",
     
@@ -102,7 +102,7 @@ export const CAR_FLEET: Car[] = [
   {
     id: "SML Isuzu Executive Bus",
     name: "SML Isuzu Executive Bus (28 seater)",
-    type: "Hatchback",
+    type: "Bus",
     pricePerDay: 1800,
     transmission: "Manual",
     
