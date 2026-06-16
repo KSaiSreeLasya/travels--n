@@ -9,7 +9,7 @@ import balenoImg from "../assets/images/suzuki_baleno_1781546486902.jpg";
 export interface Car {
   id: string;
   name: string;
-  type: 'SUV' | 'Hatchback' | 'Sedan' | 'MUV' | 'Bus';
+  type: 'SUV' | 'Hatchback' | 'Sedan' | 'MUV' | 'Bus' |'Mini Bus' | 'Tempo traveller' ;
   pricePerDay: number;
   transmission: 'Manual' | 'Automatic';
   
