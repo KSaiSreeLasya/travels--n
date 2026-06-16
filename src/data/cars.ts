@@ -23,7 +23,7 @@ export interface Car {
 export const CAR_FLEET: Car[] = [
   {
     id: "innova-classic",
-    name: "Toyota Innova (Classic with SHIELD Guard)",
+    name: "Toyota Innova ",
     type: "MUV",
     pricePerDay: 3200,
     transmission: "Manual",
