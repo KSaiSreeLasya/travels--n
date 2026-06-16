@@ -101,8 +101,8 @@ export const StructureExplorer: React.FC<StructureExplorerProps> = ({
     const matchesSearch = 
       car.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
       car.features.some(f => f.toLowerCase().includes(searchQuery.toLowerCase())) ||
-      car.type.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      car.fuel.toLowerCase().includes(searchQuery.toLowerCase());
+      car.type.toLowerCase().includes(searchQuery.toLowerCase()) ;
+      
     const matchesType = selectedVehicleType === 'All' || car.type === selectedVehicleType;
     return matchesSearch && matchesType;
   });
