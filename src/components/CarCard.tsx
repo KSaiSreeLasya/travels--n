@@ -18,7 +18,7 @@ export const CarCard: React.FC<CarCardProps> = ({ car, onBook }) => {
       id={`car-card-${car.id}`}
     >
       {/* Aspect Ratio Container for image */}
-      <div className="relative w-full overflow-hidden bg-slate-950" style={{ aspectRatio: '2/3' }}>
+      <div className="relative w-full overflow-hidden bg-slate-950" style={{ aspectRatio: '4/3' }}>
         <img
           src={car.image}
           alt={car.name}
