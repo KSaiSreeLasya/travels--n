@@ -11,6 +11,21 @@ import { CarCard } from './components/CarCard';
 import { BookingModal } from './components/BookingModal';
 import { AboutContact } from './components/AboutContact';
 import { StructureExplorer } from './components/StructureExplorer';
+
+import tirupatiImg from './assets/images/tirupati_temple_1781589399650.jpg';
+import kanipakamImg from './assets/images/kanipakam_temple_1781589414842.jpg';
+import gandikotaCanyonImg from './assets/images/gandikota_canyon_1781589430688.jpg';
+import horsleyHillsImg from './assets/images/horsley_hills_1781589445867.jpg';
+import pondicherryImg from './assets/images/pondicherry_beach_1781589461059.jpg';
+import bengaluruAirportImg from './assets/images/bengaluru_airport_1781589473662.jpg';
+import chennaiImg from './assets/images/chennai_highway_1781589488276.jpg';
+import hydAirportImg from './assets/images/hyd_airport_1781589513728.jpg';
+import gandikotaBlueRiverImg from './assets/images/gandikota_blue_river_1781589530396.jpg';
+import devuniKadapaImg from './assets/images/devuni_kadapa_temple_1781589545020.jpg';
+import ameenPeerImg from './assets/images/ameen_peer_dargah_1781589558717.jpg';
+import ontimittaImg from './assets/images/ontimitta_temple_1781589572641.jpg';
+import pushpagiriImg from './assets/images/pushpagiri_temple_1781589588527.jpg';
+import arunachalamImg from './assets/images/arunachalam_temple_1781590161166.jpg';
 import { 
   Shield, 
   MapPin, 
@@ -46,67 +61,46 @@ interface TourPackage {
   id: string;
   title: string;
   tagline: string;
-  category: 'devotional' | 'leisure' | 'airport_outstation' | 'local';
+  category: 'devotional' | 'leisure' | 'airport_outstation' | 'local' | ('devotional' | 'leisure' | 'airport_outstation' | 'local')[];
   image: string;
   features: string[];
   route: string;
 }
 
 const TOUR_PACKAGES: TourPackage[] = [
-  // DEVOTIONAL
   {
     id: "tirumala-pilgrimage",
     title: "Tirumala Tirupati Devotional",
     tagline: "Hassle-free direct family darshan tour from Kadapa",
     category: 'devotional',
-    image: "https://images.unsplash.com/photo-1608930264026-616a9c3f103a?auto=format&fit=crop&q=80&w=600",
+    image: tirupatiImg,
     features: ["Door-to-Door Pickup in Kadapa", "Alipiri Forest Path Guidance", "Flexible halts & Hairpin bend safety", "Experienced Pilgrim Support"],
     route: "Kadapa → Rajampet → Tirupati → Tirumala Hills"
-  },
-  {
-    id: "srisailam-trip",
-    title: "Mallikarjuna Srisailam Tour",
-    tagline: "Divine Jyotirlinga Darshan package through Nallamala Forest",
-    category: 'devotional',
-    image: "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&q=80&w=600",
-    features: ["Forest Checkpost Permits Included", "Expert ghat-road drivers", "Patalaganga Ropeway Halt Option", "Zero early morning delay"],
-    route: "Kadapa → Mydukur → Giddalur → Srisailam Hills"
-  },
-  {
-    id: "arunachalam-pilgrimage",
-    title: "Arunachalam Girivalam Divine Tour",
-    tagline: "Sacred monthly Girivalam and Annamalaiyar Temple direct voyage",
-    category: 'devotional',
-    image: "https://images.unsplash.com/photo-1608930264026-616a9c3f103a?auto=format&fit=crop&q=80&w=600",
-    features: ["Girivalam pathway halt assistance", "Dedicated driver who knows night hiking timings", "Full AC vehicle with comfortable reclining seats", "No hidden state-border permit tax shockers"],
-    route: "Kadapa → Chittoor → Vellore → Thiruvannamalai Hills"
-  },
-  {
-    id: "ahobilam-mahanandi",
-    title: "Ahobilam & Mahanandi Historic",
-    tagline: "Explore divine Navanarasimha temples & perennial holy streams",
-    category: 'devotional',
-    image: "https://images.unsplash.com/photo-1600100397990-24b5258f3f1e?auto=format&fit=crop&q=80&w=600",
-    features: ["Multi-destination halting route", "Spacious luggage carriers", "Local guide coordinate assist", "Ideal for senior citizens"],
-    route: "Kadapa → Mahanandi → Ahobilam Sacred Hills"
   },
   {
     id: "kanipakam-golden",
     title: "Kanipakam & Vellore Trip",
     tagline: "Blessings of Varasiddhi Vinayaka & majestic Golden Temple",
     category: 'devotional',
-    image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&q=80&w=600",
+    image: kanipakamImg,
     features: ["Bilingual driver (Telugu & Tamil)", "Halt at Kanipakam temple", "Vellore Golden Temple coverage", "Custom temple halt timing"],
     route: "Kadapa → Chittoor → Kanipakam → Vellore Golden Temple"
   },
-
-  // LEISURE
+  {
+    id: "arunachalam-pilgrimage",
+    title: "Arunachalam Girivalam Divine Tour",
+    tagline: "Sacred monthly Girivalam and Annamalaiyar Temple direct voyage",
+    category: 'devotional',
+    image: arunachalamImg,
+    features: ["Girivalam pathway halt assistance", "Dedicated driver who knows night hiking timings", "Full AC vehicle with comfortable reclining seats", "No hidden state-border permit tax shockers"],
+    route: "Kadapa → Chittoor → Vellore → Thiruvannamalai Hills"
+  },
   {
     id: "grand-canyon",
     title: "Grand Canyon of India & Caves",
     tagline: "Breathtaking gorge of Gandikota and subterranean Belum Caves",
     category: 'leisure',
-    image: "https://images.unsplash.com/photo-1614082242765-7c98ca0f3df3?auto=format&fit=crop&q=80&w=600",
+    image: gandikotaCanyonImg,
     features: ["Best routes via Jammalamadugu", "Canyon sunset viewpoint timing", "Guide matching for Belum Caves", "Historical Fort exploration halts"],
     route: "Kadapa → Jammalamadugu → Gandikota Gorge → Belum Caves"
   },
@@ -115,7 +109,7 @@ const TOUR_PACKAGES: TourPackage[] = [
     title: "Horsley Hills Cool Retreat",
     tagline: "Charming hill station escape with panoramic views",
     category: 'leisure',
-    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80&w=600",
+    image: horsleyHillsImg,
     features: ["Ghat road safety guarantee", "Galore forest viewpoints", "Madanapalle tomato-market halt", "Cool mountain adventure stop"],
     route: "Kadapa → Madanapalle → Horsley Hills viewpoint"
   },
@@ -124,18 +118,16 @@ const TOUR_PACKAGES: TourPackage[] = [
     title: "Pondicherry French Getaway",
     tagline: "Relax at scenic beaches and rich Auroville spiritual escape",
     category: 'leisure',
-    image: "https://images.unsplash.com/photo-1507524206127-48bbd363f3d7?auto=format&fit=crop&q=80&w=600",
+    image: pondicherryImg,
     features: ["Interstate permit hassle sorted", "French Colony driving routes", "Auroville Visitor Pass guide", "Promenade Beach night parking"],
     route: "Kadapa → Tirupati → Pondicherry Beach Town"
   },
-
-  // AIRPORT & OUTSTATION
   {
     id: "bangalore-transit",
     title: "Bangalore Express Airport Highway",
     tagline: "Direct swift transfer to Bangalore Airport or IT corridor",
     category: 'airport_outstation',
-    image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&q=80&w=600",
+    image: bengaluruAirportImg,
     features: ["Expressway fast-track", "Flight delay check", "Clean rest stops on Chittoor-BLR road", "Premium comfort ride with AC"],
     route: "Kadapa → Madanapalle → Bangalore Kempegowda Intl Airport"
   },
@@ -144,7 +136,7 @@ const TOUR_PACKAGES: TourPackage[] = [
     title: "Chennai Direct Coastal Line",
     tagline: "Quick outstation drop and pickups at Chennai port or airport",
     category: 'airport_outstation',
-    image: "https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&q=80&w=600",
+    image: chennaiImg,
     features: ["Direct routing with Google Maps pathing", "No border crossing stress", "Flexible luggage placement", "On-time drop guarantees"],
     route: "Kadapa → Rajampet → Renigunta → Chennai Airport (MAA)"
   },
@@ -153,17 +145,16 @@ const TOUR_PACKAGES: TourPackage[] = [
     title: "Hyderabad Capital Transit",
     tagline: "Direct highway cruise from Kadapa to Hyderabad Gachibowli",
     category: 'airport_outstation',
-    image: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&q=80&w=600",
+    image: hydAirportImg,
     features: ["Direct Kurnool 4-lane highway route", "Express night driving optional", "Drop off at Rajiv Gandhi Intl (HYD)", "Snack halt suggestion included"],
     route: "Kadapa → Kurnool → Hyderabad RGIA / Gachibowli"
   },
-  // LOCAL VISITS
   {
     id: "local-gandikota",
     title: "Gandikota Adventure Exploration",
     tagline: "Witness the majestic Grand Canyon of India & historical fort walls",
     category: 'local',
-    image: "https://images.unsplash.com/photo-1614082242765-7c98ca0f3df3?auto=format&fit=crop&q=80&w=600",
+    image: gandikotaBlueRiverImg,
     features: ["Breathtaking Pennar gorge sunset timing", "Ancient Gandikota Fort walking heritage tours", "Doorstep pickup and comfortable AC travel", "Driver assistance for canyon viewpoints & photos"],
     route: "Kadapa → Jammalamadugu → Gandikota Gorge & Fort"
   },
@@ -171,8 +162,8 @@ const TOUR_PACKAGES: TourPackage[] = [
     id: "local-devuni-kadapa",
     title: "Devuni Kadapa Shri Venkateswara Swamy Darshan",
     tagline: "Pilgrimage to the sacred threshold gateway of Tirumala Tirupati",
-    category: 'local',
-    image: "https://images.unsplash.com/photo-1608930264026-616a9c3f103a?auto=format&fit=crop&q=80&w=600",
+    category: ['local', 'devotional'],
+    image: devuniKadapaImg,
     features: ["Special quick darshan guidance", "Auspicious morning or evening visits", "Includes senior citizen comfort seating", "Zero-hassle city pickup and return drop"],
     route: "Kadapa City → Devuni Kadapa Venkateswara Shrine → Kadapa City"
   },
@@ -181,7 +172,7 @@ const TOUR_PACKAGES: TourPackage[] = [
     title: "Ameen Peer Dargah (Asthana-e-Zahrah)",
     tagline: "Sacred sufi shrine of divine harmony, peace, and spiritual light",
     category: 'local',
-    image: "https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&q=80&w=600",
+    image: ameenPeerImg,
     features: ["Floral & chaadar offering helper assistance", "Fascinating history narration of Sufi saints", "Serene evening prayer time visits", "Perfect for multi-faith peace seekers"],
     route: "Kadapa City → Ameen Peer Dargah (Pedda Dargah) → Kadapa City"
   },
@@ -190,7 +181,7 @@ const TOUR_PACKAGES: TourPackage[] = [
     title: "Ontimitta Kodandarama Swamy Temple",
     tagline: "Architectural treasure with monolith Rama, Sita & Lakshmana shrines",
     category: 'local',
-    image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&q=80&w=600",
+    image: ontimittaImg,
     features: ["Spectacular Srikrishnadevaraya stone arches", "Charming prayer and temple pool halt", "Sunset viewpoint and photography session", "Helpful local pilgrimage advice"],
     route: "Kadapa → Ontimitta Historic Temple Town → Kadapa"
   },
@@ -199,7 +190,7 @@ const TOUR_PACKAGES: TourPackage[] = [
     title: "Pushpagiri Hilltop Temples & Pennar River",
     tagline: "Second Hampi of Rayalaseema - Holy hilltop shrines & scenic riverbeds",
     category: 'local',
-    image: "https://images.unsplash.com/photo-1600100397990-24b5258f3f1e?auto=format&fit=crop&q=80&w=600",
+    image: pushpagiriImg,
     features: ["Hillside driving safety guaranteed", "Ancient rock-cut temples of Trimurthis", "Beautiful Pennar riverbank viewpoints", "Peaceful serene devotional family getaway"],
     route: "Kadapa → Chennur → Pushpagiri Temple Hills → Kadapa"
   }
@@ -728,7 +719,12 @@ function AppContent() {
               {selectedPkgCategory !== 'custom' ? (
                 <>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {TOUR_PACKAGES.filter(pkg => selectedPkgCategory === 'all' || pkg.category === selectedPkgCategory).map((pkg) => (
+                    {TOUR_PACKAGES.filter(pkg => 
+                      selectedPkgCategory === 'all' || 
+                      (Array.isArray(pkg.category) 
+                        ? pkg.category.includes(selectedPkgCategory as any) 
+                        : pkg.category === selectedPkgCategory)
+                    ).map((pkg) => (
                       <div 
                         key={pkg.id}
                         className="group relative flex flex-col md:flex-row overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-sm hover:shadow-md transition-all duration-300 animate-fade-in"
@@ -745,13 +741,16 @@ function AppContent() {
                           <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-slate-950/80 to-transparent"></div>
                           {/* Category Badge */}
                           <span className="absolute top-3 left-3 bg-slate-950/80 backdrop-blur-md px-2.5 py-1 rounded-md text-[8px] font-black uppercase tracking-widest text-amber-400 border border-amber-500/30">
-                            {pkg.category === 'devotional' 
-                              ? '🕉️ Devotional' 
-                              : pkg.category === 'local' 
-                              ? '🚩 Local Visits' 
-                              : pkg.category === 'leisure' 
-                              ? '🏞️ Leisure' 
-                              : '✈️ Outstation'}
+                            {(() => {
+                              const cat = Array.isArray(pkg.category) ? pkg.category[0] : pkg.category;
+                              return cat === 'devotional' 
+                                ? '🕉️ Devotional' 
+                                : cat === 'local' 
+                                ? '🚩 Local Visits' 
+                                : cat === 'leisure' 
+                                ? '🏞️ Leisure' 
+                                : '✈️ Outstation';
+                            })()}
                           </span>
                         </div>
 
