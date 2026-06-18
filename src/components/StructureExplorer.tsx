@@ -57,7 +57,7 @@ export const StructureExplorer: React.FC<StructureExplorerProps> = ({
   // Pre-configured custom redirect parameters for WhatsApp
   const generateWhatsAppHref = (categoryTitle: string, sub: SubCategory) => {
     const textMessage = `Hello Sree Hanuman Travels Kadapa! 🚩\n\nI want to enquire about customized tariff rates, driver parameters, and direct package booking estimates for your: \n\n📁 Category: *${categoryTitle}*\n📝 Selection: *${sub.name}*\n🏷️ Details: ${sub.tagline}\n\nSuggested Fleet Preferred:\n${sub.suggestedVehicles.map(v => `  • ${v}`).join('\n')}\n\nPlease check availability and reply back with your best rates! Thanks Settooru Bros!`;
-    return `https://wa.me/919676939529?text=${encodeURIComponent(textMessage)}`;
+    return `https://wa.me/917989648106?text=${encodeURIComponent(textMessage)}`;
   };
 
   const handleActionClick = (categoryTitle: string, sub: SubCategory) => {
@@ -222,7 +222,7 @@ export const StructureExplorer: React.FC<StructureExplorerProps> = ({
             {/* Secondary interactive callback button */}
             {isService ? (
               <a
-                href="tel:9676939529"
+                href="tel:+917989648106"
                 className="inline-flex items-center justify-center space-x-1.5 py-1.5 px-3 border-2 border-amber-500 bg-amber-500/5 hover:bg-amber-500 text-amber-700 hover:text-slate-950 rounded-full transition-all text-[9.5px] font-black uppercase tracking-wide cursor-pointer font-bold text-center"
                 id={`btn-dir-call-${item.id}`}
               >
