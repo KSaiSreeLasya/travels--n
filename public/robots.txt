@@ -1,0 +1,25 @@
+# Robots.txt for Sree Hanuman Travels
+# Allow all search engines to crawl the website
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /*.json$
+Disallow: /*.xml$
+
+# Specific rules for popular bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Crawl delay to avoid server overload
+Crawl-delay: 2
+
+# Sitemap location
+Sitemap: https://sreehanumantravels.com/sitemap.xml

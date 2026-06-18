@@ -10,7 +10,7 @@ interface CarCardProps {
 export const CarCard: React.FC<CarCardProps> = ({ car, onBook }) => {
   // Prebuilt WhatsApp message
   const whatsappText = `Hello Sree Hanuman Travels Kadapa!\n\nI want to inquire about the rental tariff and custom package rates of *${car.name}*:\n🚗 Class: ${car.type}\n👥 Seating: ${car.seats} Passengers\n \nPlease share availability and pricing sheets! Thank you.`;
-  const whatsappUrl = `https://wa.me/919676939529?text=${encodeURIComponent(whatsappText)}`;
+  const whatsappUrl = `https://wa.me/917989648106?text=${encodeURIComponent(whatsappText)}`;
 
   return (
     <div 
@@ -46,8 +46,8 @@ export const CarCard: React.FC<CarCardProps> = ({ car, onBook }) => {
           <p className="text-[10px] text-white/40 uppercase tracking-widest font-bold mt-1">Premium Kadapa Shuttle</p>
         </div>
 
-        {/* Dynamic specifications list */}
-        <div className="grid grid-cols-2 gap-3.5 border-b border-white/5 pb-4">
+        {/* Dynamic specifications list - single row */}
+        <div className="flex items-center justify-between gap-4 border-b border-white/5 pb-4">
           <div className="flex items-center space-x-2 text-white/70">
             <Users className="h-4 w-4 text-amber-500 shrink-0" />
             <span className="text-xs font-bold">{car.seats} Seater</span>
@@ -56,7 +56,6 @@ export const CarCard: React.FC<CarCardProps> = ({ car, onBook }) => {
             <Settings className="h-4 w-4 text-amber-500 shrink-0" />
             <span className="text-xs font-bold">{car.transmission}</span>
           </div>
-          
           <div className="flex items-center space-x-2 text-white/70">
             <Gauge className="h-4 w-4 text-amber-500 shrink-0" />
             <span className="text-xs font-bold">{car.mileage}</span>
@@ -97,9 +96,9 @@ export const CarCard: React.FC<CarCardProps> = ({ car, onBook }) => {
         <div className="pt-2 grid grid-cols-3 gap-3.5 mt-auto">
           {/* Direct call button for more info */}
           <a
-            href="tel:9676939529"
+            href="tel:+917989648106"
             className="flex items-center justify-center space-x-1.5 rounded-full border border-white/10 hover:border-amber-500/40 bg-slate-950 py-3 text-xs font-black uppercase tracking-widest text-slate-200 hover:text-white hover:bg-slate-900 active:scale-95 transition-all text-center"
-            title="Call 9676939529 for direct booking"
+            title="Call +91 7989648106 for direct booking"
             id={`btn-call-${car.id}`}
           >
             <Phone className="h-3.5 w-3.5 text-amber-500" />

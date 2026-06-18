@@ -3,9 +3,11 @@
  * SPDX-License-Identifier: Apache-2.5
  */
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { isFirebaseConfigured } from './lib/firebase';
 import { CAR_FLEET, Car } from './data/cars';
+import { SEO_META_DATA, updatePageMeta } from './data/seoMeta';
+import { injectOrganizationSchema, injectHomePageSchema } from './data/schemaMarkup';
 import { Header } from './components/Header';
 import { CarCard } from './components/CarCard';
 import { BookingModal } from './components/BookingModal';
@@ -331,6 +333,12 @@ const INITIAL_REVIEWS: AppReview[] = [
 ];
 
 function AppContent() {
+  useEffect(() => {
+    updatePageMeta(SEO_META_DATA.home);
+    injectOrganizationSchema();
+    injectHomePageSchema();
+  }, []);
+
   // Navigation State
   const [activeTab, setActiveTab] = useState<'explore' | 'dashboard'>('explore');
   const [currentView, setCurrentView] = useState<'home' | 'reviews'>('home');
@@ -521,12 +529,12 @@ function AppContent() {
                   <span>Explore Rental Fleet</span>
                 </button>
                 
-                <a 
-                  href="tel:9676939529"
+                <a
+                  href="tel:+917989648106"
                   className="w-full sm:w-auto inline-flex items-center justify-center space-x-2.5 rounded-full border border-white/20 bg-white/5 hover:bg-white/10 px-8 py-4 text-xs font-black uppercase tracking-widest text-slate-200 hover:text-white transition-all font-bold"
                 >
                   <Phone className="h-4 w-4 text-amber-500" />
-                  <span>Call 9676939529</span>
+                  <span>Call +91 7989648106</span>
                 </a>
               </div>
 
@@ -578,7 +586,7 @@ function AppContent() {
                 </div>
                 <div>
                   <h4 className="text-xs font-black uppercase tracking-wider text-slate-800">Support Chat Line</h4>
-                  <p className="text-[11px] text-slate-500 font-semibold uppercase text-emerald-600 font-mono">WhatsApp 9676939529</p>
+                  <p className="text-[11px] text-slate-500 font-semibold uppercase text-emerald-600 font-mono">WhatsApp +91 7989648106</p>
                 </div>
               </div>
             </section>
@@ -778,7 +786,7 @@ function AppContent() {
                           {/* Packages WhatsApp request line & direct call */}
                           <div className="pt-2 grid grid-cols-2 gap-2 border-t border-slate-100">
                             <a 
-                              href="tel:9676939529"
+                              href="tel:+917989648106"
                               className="flex items-center justify-center space-x-1 text-center py-2 border border-slate-200 hover:border-amber-500 text-slate-800 text-[10px] font-black uppercase tracking-wider rounded-full transition-colors font-semibold"
                             >
                               <Phone className="h-3 w-3 text-amber-500 shrink-0" />
@@ -786,7 +794,7 @@ function AppContent() {
                             </a>
 
                             <a 
-                              href={`https://wa.me/919676939529?text=${encodeURIComponent(
+                              href={`https://wa.me/917989648106?text=${encodeURIComponent(
                                 `Hello Sree Hanuman Travels Kadapa!\n\nI want to inquire about custom pricing and availability for the *${pkg.title}* package: (${pkg.route}). Please share the details! Thanks!`
                               )}`}
                               target="_blank"
@@ -1030,7 +1038,7 @@ function AppContent() {
                     {/* Direct dispatch button to WhatsApp */}
                     <div className="mt-4">
                       <a 
-                        href={`https://wa.me/919676939529?text=${encodeURIComponent(
+                        href={`https://wa.me/917989648106?text=${encodeURIComponent(
                           `Hello Sree Hanuman Travels Kadapa! 🚩\n\nI want to receive a customized friendly tariff budget quotation for a custom travel route with additional road extras:\n\n🗺️ TOUR CUSTOM ROUTE:\n- Start Location: Kadapa Hub\n- Destination: *${customDestination.trim() || 'Customized Tour Route'}*\n- Request Duration: *${customDays}* Day(s)\n- Vehicle Model: *${customCarType}*\n\n🎁 ADDED ROAD EXTRAS REQUESTED:\n${
                             customExtras.map(ex => `  • ${ex}`).join('\n') || '  (No specific extras - pure direct transit)'
                           }\n\nPlease check availability and reply back with your best friendliest rate! Thanks Settooru Bros!`
@@ -1499,7 +1507,7 @@ function AppContent() {
             📍 3/108-10-A1, Sattar Colony, Ravindra Nagar, Nagarajupeta, Kadapa, Andhra Pradesh 516001
           </p>
           <p className="text-[11px] text-slate-700 font-black uppercase tracking-wider">
-            📞 Direct Calls: 7989648106 • 9866653347 • 8886328410 • Support Hotline: 9676939529
+            📞 Contact: +91 7989648106 • Support Hotline: +91 7989648106
           </p>
           <p className="text-[10px] text-slate-400 font-mono pt-4 border-t border-slate-100 max-w-md mx-auto">
             © 2026 Sree Hanuman Travels Kadapa. Direct authorized Car, Bus & Cab Operator with Zero Security Deposit. All Rights Reserved.

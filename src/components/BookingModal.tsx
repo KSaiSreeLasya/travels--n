@@ -133,7 +133,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
   const triggerWhatsAppRedirect = () => {
     if (!successInquiry) return;
     
-    const ownerWhatsAppNumber = "919676939529"; // Real Sree Hanuman Travels owner whatsapp
+    const ownerWhatsAppNumber = "917989648106"; // Real Sree Hanuman Travels owner whatsapp
     const textMessage = `Hello Sree Hanuman Travels Kadapa!\n\nI want to inquire about leasing a vehicle. Details:\n\n👤 Rentee Name: ${successInquiry.customerName}\n📱 WhatsApp Phone: ${successInquiry.customerPhone}\n🚗 Selected Vehicle: ${successInquiry.carName}\n📅 Dates: ${successInquiry.startDate} to ${successInquiry.endDate} (${successInquiry.durationDays} Days)\n\nPlease share the custom daily tariff prices for this booking. Thanks!`;
     
     const encodedMessage = encodeURIComponent(textMessage);
@@ -248,7 +248,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                       <input 
                         type="tel"
                         required
-                        placeholder="e.g. 9676939529"
+                        placeholder="e.g. 9876543210"
                         value={customerPhone}
                         onChange={(e) => setCustomerPhone(e.target.value)}
                         className="block w-full rounded-xl border border-white/10 bg-slate-900 py-2.5 pl-10 pr-4 text-xs text-white focus:outline-none focus:border-amber-500 transition-all font-mono"
@@ -374,13 +374,13 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                   <span>Send direct WhatsApp now</span>
                 </button>
 
-                <a 
-                  href="tel:9676939529"
+                <a
+                  href="tel:+917989648106"
                   className="w-full inline-flex items-center justify-center space-x-2.5 rounded-full border border-white/10 hover:border-amber-500/40 bg-slate-950 py-3 text-xs font-black uppercase tracking-widest text-white hover:bg-slate-900 active:scale-95 transition-all text-center"
                   id="btn-call-owner-direct"
                 >
                   <Phone className="h-4 w-4 text-amber-400 animate-pulse" />
-                  <span>Call Hotline 9676939529</span>
+                  <span>Call Hotline +91 7989648106</span>
                 </a>
               </div>
 

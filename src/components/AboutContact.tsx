@@ -11,7 +11,7 @@ export const AboutContact: React.FC = () => {
   const handleWhatsAppOwner = () => {
     const textMessage = "Hello Sree Hanuman Travels owner, I want to inquire about renting a car or booking a tourist package/bus at your Kadapa branch. Please share details.";
     const encodedMessage = encodeURIComponent(textMessage);
-    const whatsappUrl = `https://wa.me/919676939529?text=${encodedMessage}`;
+    const whatsappUrl = `https://wa.me/917989648106?text=${encodedMessage}`;
     window.open(whatsappUrl, '_blank');
   };
 
@@ -59,24 +59,13 @@ export const AboutContact: React.FC = () => {
           </div>
         </div>
 
-        {/* Professional Contact Numbers panel */}
+        {/* Professional Contact Number panel */}
         <div className="border border-white/10 rounded-xl p-4 bg-amber-500/5 space-y-3">
           <h4 className="text-xs font-black text-amber-400 uppercase tracking-widest flex items-center">
             <Phone className="h-3.5 w-3.5 mr-2" /> Direct Call Support (Settooru Bros)
           </h4>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm font-semibold text-white">
-            <div className="bg-slate-950 px-3 py-2 rounded-lg border border-white/5 text-center">
-              <span className="text-[10px] text-white/40 block pb-0.5">Cell 1</span>
-              <a href="tel:7989648106" className="font-mono hover:text-amber-400">7989648106</a>
-            </div>
-            <div className="bg-slate-950 px-3 py-2 rounded-lg border border-white/5 text-center">
-              <span className="text-[10px] text-white/40 block pb-0.5">Cell 2</span>
-              <a href="tel:9866653347" className="font-mono hover:text-amber-400">9866653347</a>
-            </div>
-            <div className="bg-slate-950 px-3 py-2 rounded-lg border border-white/5 text-center">
-              <span className="text-[10px] text-white/40 block pb-0.5">Cell 3</span>
-              <a href="tel:8886328410" className="font-mono hover:text-amber-400">8886328410</a>
-            </div>
+          <div className="text-center">
+            <a href="tel:+917989648106" className="font-mono text-lg font-bold text-white hover:text-amber-400 transition-colors">+91 7989648106</a>
           </div>
         </div>
 

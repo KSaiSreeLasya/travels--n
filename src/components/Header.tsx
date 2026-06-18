@@ -140,15 +140,15 @@ export const Header: React.FC<HeaderProps> = ({
         {/* Action Widgets: Call Quick button & Member Auth details */}
         <div className="hidden lg:flex items-center space-x-3">
           
-          {/* Header direct call button linking to 9676939529 */}
-          <a 
-            href="tel:9676939529" 
+          {/* Header direct call button linking to +91 7989648106 */}
+          <a
+            href="tel:+917989648106"
             className="flex items-center space-x-2 rounded-full border border-orange-500/30 bg-orange-500/10 hover:bg-orange-500/20 px-4 py-2 text-xs font-black text-amber-400 hover:text-amber-300 transition-all font-bold tracking-wider cursor-pointer"
             title="Call Head Office 24/7"
             id="nav-call-hotline"
           >
             <Phone className="h-3.5 w-3.5 animate-bounce" />
-            <span>Call 9676939529</span>
+            <span>Call +91 7989648106</span>
           </a>
         </div>
 
@@ -156,8 +156,8 @@ export const Header: React.FC<HeaderProps> = ({
         <div className="flex items-center space-x-3 lg:hidden">
           
           {/* Quick call dialer for mobile header */}
-          <a 
-            href="tel:9676939529" 
+          <a
+            href="tel:+917989648106"
             className="flex items-center justify-center h-10 w-10 rounded-full border border-orange-500/30 bg-orange-500/10 text-amber-400 hover:bg-orange-500/20 active:scale-90 transition-all cursor-pointer"
             title="Telephonic support hotline"
           >
@@ -258,8 +258,8 @@ export const Header: React.FC<HeaderProps> = ({
 
           {/* Quick Support Line details in Drawer */}
           <div className="pt-3 border-t border-white/10">
-            <a 
-              href="tel:9676939529"
+            <a
+              href="tel:+917989648106"
               className="flex items-center justify-center space-x-2 w-full py-3 rounded-xl bg-orange-600/20 text-xs text-amber-400 border border-orange-500/30 font-black uppercase tracking-wider text-center"
             >
               <Phone className="h-3.5 w-3.5" />
