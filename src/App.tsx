@@ -3,9 +3,11 @@
  * SPDX-License-Identifier: Apache-2.5
  */
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { isFirebaseConfigured } from './lib/firebase';
 import { CAR_FLEET, Car } from './data/cars';
+import { SEO_META_DATA, updatePageMeta } from './data/seoMeta';
+import { injectOrganizationSchema, injectHomePageSchema } from './data/schemaMarkup';
 import { Header } from './components/Header';
 import { CarCard } from './components/CarCard';
 import { BookingModal } from './components/BookingModal';
@@ -331,6 +333,12 @@ const INITIAL_REVIEWS: AppReview[] = [
 ];
 
 function AppContent() {
+  useEffect(() => {
+    updatePageMeta(SEO_META_DATA.home);
+    injectOrganizationSchema();
+    injectHomePageSchema();
+  }, []);
+
   // Navigation State
   const [activeTab, setActiveTab] = useState<'explore' | 'dashboard'>('explore');
   const [currentView, setCurrentView] = useState<'home' | 'reviews'>('home');
